@@ -3,7 +3,7 @@ FROM docker.io/postgres:latest
 # Install pgjwt extension
 # https://github.com/michelp/pgjwt#install
 RUN apt-get update \
-    && apt-get install \
+    && apt-get install -qq \
       build-essential \
       git \
       postgresql-server-dev-17
