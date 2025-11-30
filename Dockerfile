@@ -1,4 +1,4 @@
-FROM postgres:latest
+FROM docker.io/postgres:latest
 
 # Install pgjwt extension
 # https://github.com/michelp/pgjwt#install
