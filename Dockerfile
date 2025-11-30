@@ -6,7 +6,7 @@ RUN apt-get update \
     && apt-get install \
       build-essential \
       git \
-      postgresql-server-dev
+      postgresql-server-dev-17
 
 RUN git clone https://github.com/michelp/pgjwt.git /src \
     && cd /src \
