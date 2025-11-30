@@ -2,14 +2,12 @@ FROM docker.io/postgres:latest
 
 # Install pgjwt extension
 # https://github.com/michelp/pgjwt#install
-RUN apt-get update -qq \
-    && apt-get install -qq \
+RUN apt-get update \
+    && apt-get install \
       build-essential \
       git \
-      postgresql-server-dev-12 \
-      > /dev/nul
-RUN cd tmp \
-    && git clone https://github.com/michelp/pgjwt.git \
-    && cd pgjwt \
-    && make install \
-    && cd ../..
+      postgresql-server-dev
+
+RUN git clone https://github.com/michelp/pgjwt.git /src \
+    && cd /src \
+    && make install
